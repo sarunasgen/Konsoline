@@ -12,17 +12,23 @@ namespace ManoPrograma
             Automobilis auto1 = new Automobilis("BMW", "330i", DateOnly.Parse("2012-04-12"), 400000);
             Automobilis auto2 = new Automobilis("Audi", "RS6", DateOnly.Parse("2008-08-19"), 500000, "Raudona");
 
-            Automobilis[] automobiliai = new Automobilis[2];
+            AutomobiliuParkas automobiliuParkas = new AutomobiliuParkas();
+            automobiliuParkas.PridetiAutomobili(auto1);
+            automobiliuParkas.PridetiAutomobili(auto2);
 
-            automobiliai[0] = auto1;
-            automobiliai[1] = auto2;
+          //  Console.WriteLine(automobiliuParkas.GautiAutoPagalIndex(1));
 
-            automobiliai[0].Perdazyti("Melyna");
-           
-            for(int i = 0; i< automobiliai.Length; i++)
+            Automobilis[] visi = automobiliuParkas.GautiVisusAuto();
+
+            foreach(Automobilis sarasoElementas in visi)
             {
-                Console.WriteLine(automobiliai[i]);
+                Console.WriteLine(sarasoElementas);
+                if(sarasoElementas == null)
+                {
+                    break;
+                }
             }
+            
         }
 
     }
