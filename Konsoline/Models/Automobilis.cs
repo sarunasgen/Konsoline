@@ -13,17 +13,11 @@ namespace Konsoline.Models
         public DateOnly PagaminimoMetai { get; set; }
         public int Rida { get; set; }
         private string Spalva { get; set; } = "Juoda";
+
         public Automobilis()
         {
 
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="marke">Automobilio Marke</param>
-        /// <param name="modelis">Automobilio Modelis</param>
-        /// <param name="pagaminimoMetai">Pagaminimo metai (tik data, DateOnly)</param>
-        /// <param name="rida">Rida (sveikasis skaicius)</param>
         public Automobilis(string marke, string modelis, DateOnly pagaminimoMetai, int rida)
         {
             Marke = marke;
